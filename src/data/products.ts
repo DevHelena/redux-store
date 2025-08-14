@@ -1,4 +1,6 @@
-const products = [
+import { Product } from "../types/product";
+
+const products: Product[] = [
   {
     id: "6228fe63b7e6cb904bbe0165",
     price: 150,

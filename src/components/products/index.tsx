@@ -1,15 +1,13 @@
+import React from "react";
 import products from "../../data/products";
-
-// Components
-import ProductItem from "../product-item/index";
-
-// Styles
+import ProductItem from "../product-item";
+import type { Product } from "../../types/product";
 import * as Styles from "./styles";
 
-const Products = () => {
+const Products: React.FC = () => {
   return (
     <Styles.Container>
-      {products.map((product) => (
+      {products.map((product: Product) => (
         <ProductItem key={product.id} product={product} />
       ))}
     </Styles.Container>

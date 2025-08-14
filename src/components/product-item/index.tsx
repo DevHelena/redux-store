@@ -1,15 +1,22 @@
+import React from "react";
 import { BsCartPlus } from "react-icons/bs";
-import CustomButton from "../custom-button/index";
+import CustomButton from "../custom-button";
 import * as Styles from "./styles";
 import { addProduct } from "../../redux/cart/actions";
 import { useDispatch } from "react-redux";
+import type { AppDispatch } from "../../redux/store";
+import type { Product } from "../../types/product";
 
-const ProductItem = ({ product }) => {
-  const dispatch = useDispatch()
+type ProductItemProps = {
+  product: Product;
+};
+
+const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
+  const dispatch = useDispatch<AppDispatch>();
 
   const handleProductClick = () => {
-    dispatch(addProduct(product))
-  }
+    dispatch(addProduct(product));
+  };
 
   return (
     <Styles.ProductContainer>
