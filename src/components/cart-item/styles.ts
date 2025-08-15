@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+type CartItemImageProps = {
+  imageUrl: string;
+}
+
 export const CartItemContainer = styled.div`
   display: flex;
   align-items: center;
@@ -10,7 +14,7 @@ export const CartItemContainer = styled.div`
   }
 `;
 
-export const CartItemImage = styled.div`
+export const CartItemImage = styled.div<CartItemImageProps>`
   background-image: ${(props) => `url('${props.imageUrl}')`};
   height: 250px;
   width: 170px;

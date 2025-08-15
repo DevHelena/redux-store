@@ -1,4 +1,3 @@
-import React from "react";
 import { BsCartPlus } from "react-icons/bs";
 import CustomButton from "../custom-button";
 import * as Styles from "./styles";
@@ -11,7 +10,7 @@ type ProductItemProps = {
   product: Product;
 };
 
-const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
+const ProductItem = ({ product }: ProductItemProps) => {
   const dispatch = useDispatch<AppDispatch>();
 
   const handleProductClick = () => {

@@ -1,4 +1,3 @@
-import React from "react";
 import { AiOutlinePlus, AiOutlineMinus, AiOutlineClose } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import * as Styles from "./styles";
@@ -10,7 +9,7 @@ type CartItemProps = {
   product: Product & { quantity: number };
 };
 
-const CartItem: React.FC<CartItemProps> = ({ product }) => {
+const CartItem = ({ product }: CartItemProps) => {
   const dispatch = useDispatch<AppDispatch>();
 
   const handleRemoveClick = () => dispatch(removeProduct(product.id));

@@ -1,8 +1,8 @@
 import { legacy_createStore as createStore, applyMiddleware } from "redux";
-import logger from "redux-logger";
+//import logger from "redux-logger";
 import rootReducer from "./rootReducer";
 
-const enhancer = applyMiddleware(logger);
+const enhancer = undefined //applyMiddleware(logger);
 
 const store = createStore(rootReducer, undefined, enhancer);
 

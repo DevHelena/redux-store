@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { loginUser, logoutUser } from "../../redux/user/actions";
 import Cart from "../cart";
@@ -7,7 +7,7 @@ import { selectProductsCount } from "../../redux/cart/cart.selectors";
 import type { AppDispatch } from "../../redux/store";
 import type { RootState } from "../../redux/rootReducer";
 
-const Header: React.FC = () => {
+const Header = () => {
   const [cartIsVisible, setCartIsVisible] = useState(false);
   const dispatch = useDispatch<AppDispatch>();
 

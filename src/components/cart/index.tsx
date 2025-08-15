@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import * as Styles from "./styles";
 import CartItem from "../cart-item";
@@ -10,7 +9,7 @@ type CartProps = {
   setIsVisible: (value: boolean) => void;
 };
 
-const Cart: React.FC<CartProps> = ({ isVisible, setIsVisible }) => {
+const Cart = ({ isVisible, setIsVisible }: CartProps) => {
   const products = useSelector((state: RootState) => state.cartReducer.products);
 
   const productsTotalPrice = useSelector(selectProductsTotalPrice);

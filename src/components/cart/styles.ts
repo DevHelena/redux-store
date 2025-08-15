@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const CartContainer = styled.div`
+type CartContainerProps = {
+  isVisible: boolean;
+}
+
+export const CartContainer = styled.div<CartContainerProps>`
   position: fixed;
   height: 100vh;
   width: 100vw;

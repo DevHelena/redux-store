@@ -1,4 +1,4 @@
-import React, { ReactNode, ButtonHTMLAttributes } from "react";
+import { ReactNode, ButtonHTMLAttributes } from "react";
 import * as Styles from "./styles";
 
 type CustomButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -6,7 +6,7 @@ type CustomButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   startIcon?: ReactNode;
 };
 
-const CustomButton: React.FC<CustomButtonProps> = ({ children, startIcon, ...rest }) => {
+const CustomButton = ({ children, startIcon, ...rest }: CustomButtonProps) => {
   return (
     <Styles.CustomButtonContainer {...rest}>
       {startIcon && <Styles.IconContainer>{startIcon}</Styles.IconContainer>}
