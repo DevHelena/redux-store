@@ -10,7 +10,7 @@ const cartReducer = (
   action: CartAction
 ): CartState => {
   switch (action.type) {
-    case CartActionTypes.ADD_PRODUCT: {
+    case CartActionTypes.ADD_PRODUCT:
       const exists = state.products.some((product) => product.id === action.payload.id);
 
       if (exists) {
@@ -26,10 +26,9 @@ const cartReducer = (
         ...state,
         products: [
           ...state.products,
-          { ...action.payload, quantity: 1 }, // CartItem garante quantity
+          { ...action.payload, quantity: 1 },
         ],
       };
-    }
 
     case CartActionTypes.REMOVE_PRODUCT:
       return {

@@ -20,7 +20,7 @@ const Header = () => {
     dispatch(
       loginUser({
         name: "Helena Maia",
-        email: "helenamaia@gmail.com",
+        email: "helenaaraujo.dev@gmail.com",
       })
     );
   };
@@ -32,12 +32,12 @@ const Header = () => {
       <Styles.Logo>Redux Shopping</Styles.Logo>
       <Styles.Buttons>
         {currentUser ? (
-          <div onClick={handleSairClick}>Sair</div>
+          <div onClick={handleSairClick}>Logout</div>
         ) : (
           <div onClick={handleLoginClick}>Login</div>
         )}
 
-        <div onClick={handleCartClick}>Carrinho ({productsCount})</div>
+        <div onClick={handleCartClick}>Cart ({productsCount})</div>
       </Styles.Buttons>
 
       <Cart isVisible={cartIsVisible} setIsVisible={setCartIsVisible} />

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 type ProductImageProps = {
   imageUrl: string;
-}
+};
 
 export const ProductContainer = styled.div`
   display: flex;

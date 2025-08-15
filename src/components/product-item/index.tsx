@@ -21,7 +21,7 @@ const ProductItem = ({ product }: ProductItemProps) => {
     <Styles.ProductContainer>
       <Styles.ProductImage imageUrl={product.imageUrl}>
         <CustomButton startIcon={<BsCartPlus />} onClick={handleProductClick}>
-          Adicionar ao carrinho
+          Add to Cart
         </CustomButton>
       </Styles.ProductImage>
 
