@@ -5,11 +5,14 @@ import * as Styles from "./styles";
 
 const Products = () => {
   return (
-    <Styles.Container>
-      {products.map((product: Product) => (
-        <ProductItem key={product.id} product={product} />
-      ))}
-    </Styles.Container>
+    <Styles.ContainerProduct>
+      <Styles.ProductList>
+        {products.map((product: Product) => (
+          <ProductItem key={product.id} product={product} />
+        ))}        
+      </Styles.ProductList>
+
+    </Styles.ContainerProduct>
   );
 };
 

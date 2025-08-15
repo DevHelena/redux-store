@@ -28,20 +28,22 @@ const Header = () => {
   const handleSairClick = () => dispatch(logoutUser());
 
   return (
-    <Styles.Container>
-      <Styles.Logo>Redux Shopping</Styles.Logo>
-      <Styles.Buttons>
-        {currentUser ? (
-          <div onClick={handleSairClick}>Logout</div>
-        ) : (
-          <div onClick={handleLoginClick}>Login</div>
-        )}
+    <Styles.ContainerHeader>
+      <Styles.Header>
+        <Styles.Logo>Redux Shopping</Styles.Logo>
+        <Styles.Buttons>
+          {currentUser ? (
+            <div onClick={handleSairClick}>Logout</div>
+          ) : (
+            <div onClick={handleLoginClick}>Login</div>
+          )}
 
-        <div onClick={handleCartClick}>Cart ({productsCount})</div>
-      </Styles.Buttons>
+          <div onClick={handleCartClick}>Cart ({productsCount})</div>
+        </Styles.Buttons>
 
-      <Cart isVisible={cartIsVisible} setIsVisible={setCartIsVisible} />
-    </Styles.Container>
+        <Cart isVisible={cartIsVisible} setIsVisible={setCartIsVisible} />        
+      </Styles.Header>
+    </Styles.ContainerHeader>
   );
 };
 

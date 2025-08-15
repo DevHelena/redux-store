@@ -5,29 +5,19 @@ type ProductImageProps = {
 };
 
 export const ProductContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  margin-bottom: 30px;
 `;
 
 export const ProductInfo = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
-
-  p {
-    font-size: 1rem;
-    font-weight: 500;
-  }
+  margin: 10px;
 `;
 
 export const ProductImage = styled.div<ProductImageProps>`
   background-image: ${(props) => `url('${props.imageUrl}')`};
-  height: 380px;
   width: 300px;
+  height: 360px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -56,8 +46,43 @@ export const ProductImage = styled.div<ProductImageProps>`
       opacity: 1;
     }
   }
-
-  @media (max-width: 768px) {
-    width: 100%;
+  @media (max-width: 1030px) {
+    width: 40vw;
+    height: 450px;
   }
+
+  @media (max-width: 775px) {
+    width: 80vw;
+    height: 450px;
+  }
+`;
+
+export const CustomButtonContainer = styled.button`
+  width: 100%;
+  background-color: #222222;
+  color: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-weight: 600;
+  transition: all 0.5s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #000000;
+  }
+`;
+
+export const IconContainer = styled.div`
+  margin-right: 8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 `;
