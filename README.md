@@ -48,7 +48,7 @@ A live deployment is available for testing:
 ### ⚙️ Step-by-step
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/DevHelena/redux-store
 ```
 
 2. Navigate to the root folder:
