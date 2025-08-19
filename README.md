@@ -34,7 +34,7 @@ A live deployment is available for testing:
 
 - **React** → Library for building the user interface.
 - **Redux** → Global state management.
-- **Styled-components** → Styling with CSS-in-JS and responsiveness support.
+- **Styled-components** → Styling with CSS-in-JS and responsive desing.
 - **Redux Logger** (optional) → Middleware to log actions and states to the console during development.
 
 ---
@@ -77,7 +77,7 @@ This makes **debugging during development** much easier.
 
 ### How to Enable It
 You **don't need to install anything** – the dependency is already in the project and was downloaded when you ran `npm install` or `yarn install`.
-Simply go to `src/redux/store.ts` and uncomment the lines related to `redux-logger`.
+Simply go to `src/redux/store.ts` and uncomment the lines related to [redux-logger](https://www.npmjs.com/package/redux-logger).
 
 ```ts
 import { legacy_createStore as createStore, applyMiddleware } from "redux";
